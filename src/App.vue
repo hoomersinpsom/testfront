@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <header-bar />
+    <profile />
+    <bread-crumb :active="1" />
+    <personal-data />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import HeaderBar from '@/components/HeaderBar.vue'
+import Profile from '@/components/Profile.vue'
+import BreadCrumb from '@/components/BreadCrumb.vue'
+import PersonalData from '@/components/PersonalData.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
-  },
-};
+    HeaderBar,
+    Profile,
+    BreadCrumb,
+    PersonalData
+  }
+}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import '~@/scss/base';
 </style>
